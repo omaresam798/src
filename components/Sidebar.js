@@ -16,7 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const routes = [
-  { name: "Dashboard", path: "/", icon: LayoutDashboard },
+  { name: "Dashboard", path: "dashboard", icon: LayoutDashboard },
   { name: "CV Analyzer", path: "/cv-analyzer", icon: FileSearch },
   { name: "Job Matching", path: "/job-matching", icon: Briefcase },
   { name: "Skill Gap Detector", path: "/skill-gap", icon: Target },

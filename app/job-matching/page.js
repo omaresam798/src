@@ -37,7 +37,7 @@ export default function JobMatchingPage() {
           headers: {
             accept: "application/json",
           },
-        }
+        },
       );
 
       if (!response.ok) {
@@ -77,7 +77,8 @@ export default function JobMatchingPage() {
           Job Matching Engine
         </h1>
         <p className="text-muted-foreground">
-          AI-curated roles based on semantic similarity to your extracted skill vectors.
+          AI-curated roles based on semantic similarity to your extracted skill
+          vectors.
         </p>
       </div>
 
@@ -116,8 +117,16 @@ export default function JobMatchingPage() {
                 key={job.id || idx}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: idx * 0.05 }}
                 className="glass-panel p-6 rounded-2xl flex flex-col md:flex-row gap-6"
+                whileHover={{
+                  rotateX: 8,
+                  rotateY: -8,
+                  scale: 1.03,
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+                style={{
+                  transformStyle: "preserve-3d",
+                }}
               >
                 <div className="flex-1">
                   <h2 className="text-xl font-bold text-foreground mb-2">
